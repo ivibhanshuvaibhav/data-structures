@@ -1,6 +1,6 @@
 package stack;
 
-public class StackUse {
+public class BalancedParenthesis {
 
     // check if an expression is balanced or not
 
@@ -35,22 +35,6 @@ public class StackUse {
         return s.isEmpty();
     }
 
-    // reverse a stack using another empty stack
-
-    public static StackUsingArray reverseStack(StackUsingArray s){
-
-        StackUsingArray r = new StackUsingArray();
-
-        while (!s.isEmpty()){
-            try {
-                r.push(s.pop());
-            } catch (StackEmptyException e){
-                System.out.println("Stack is empty");
-            }
-        }
-
-        return r;
-    }
 
     public static void main(String[] args) {
 
@@ -65,38 +49,6 @@ public class StackUse {
         System.out.println(exp2 + " Balanced: " + isBalanced(exp2));
         System.out.println(exp3 + " Balanced: " + isBalanced(exp3));
         System.out.println(exp4 + " Balanced: " + isBalanced(exp4));
-
-        StackUsingArray s = new StackUsingArray();
-        s.push(10);
-        s.push(20);
-        s.push(30);
-        s.push(40);
-        s.push(50);
-
-//        StackUsingArray b = s;
-//
-//        System.out.println("Original stack is");
-//
-//        while (!b.isEmpty()){
-//            try {
-//                System.out.println(b.pop());
-//            } catch (StackEmptyException e){
-//                System.out.println("Nothin in stack");
-//            }
-//        }
-
-        System.out.println("Reversed stack is");
-
-        StackUsingArray rev = reverseStack(s);
-
-        while (!rev.isEmpty()){
-            try {
-                System.out.println(rev.pop());
-            } catch(StackEmptyException e){
-                System.out.println("Nothing in stack");
-            }
-        }
-
 
     }
 }

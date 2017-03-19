@@ -2,7 +2,7 @@ package linked_list;
 
 import java.util.Scanner;
 
-public class LinkedListUse {
+public class LinkedListOperations {
 
     // taking input as linked list
 
@@ -33,7 +33,6 @@ public class LinkedListUse {
 
     public static void printLinkedList(LinkedListNode<Integer> head){
 
-        System.out.println("\n\nLinked List is");
         while (head != null){
             System.out.print(head.getData()+"-->");
             head = head.next;
@@ -354,72 +353,82 @@ public class LinkedListUse {
         // 1 2 3 4 5 6 7 8 9 10 -1
         // 2 4 6 8 10 12 14 16 18 20 -1
 
-//        LinkedListNode head = linkedListInput();
-        LinkedListNode<Integer> head = new LinkedListNode(1);
-        head.next = new LinkedListNode(2);
-        head.next.next = new LinkedListNode(3);
-        head.next.next.next = new LinkedListNode(4);
-        head.next.next.next.next = new LinkedListNode(5);
-        head.next.next.next.next.next = new LinkedListNode(6);
-        head.next.next.next.next.next.next = new LinkedListNode(7);
-        head.next.next.next.next.next.next.next = new LinkedListNode(8);
-        head.next.next.next.next.next.next.next.next = new LinkedListNode(9);
-        head.next.next.next.next.next.next.next.next.next = new LinkedListNode(10);
-//        LinkedListNode<Integer> head = new LinkedListNode(1);
-//        head.next = new LinkedListNode(2);
-//        head.next.next = new LinkedListNode(3);
-//        head.next.next.next = new LinkedListNode(4);
-//        head.next.next.next.next = new LinkedListNode(5);
-//        head.next.next.next.next.next = new LinkedListNode(5);
-//        head.next.next.next.next.next.next = new LinkedListNode(4);
-//        head.next.next.next.next.next.next.next = new LinkedListNode(3);
-//        head.next.next.next.next.next.next.next.next = new LinkedListNode(2);
-//        head.next.next.next.next.next.next.next.next.next = new LinkedListNode(1);
-        printLinkedList(head);
-//        LinkedListNode head1 = head;
-//        LinkedListNode head2 = linkedListInput();
+        LinkedListNode head = linkedListInput();
+        LinkedListNode head1 = linkedListInput();
 
-//        System.out.println("Length of Linked List is " + linkedListLength(head));
-//        System.out.println("Length of Linked List is " + linkedListLengthRecursion(head));
+        System.out.println("\nFirst linked list is");
+        printLinkedList(head);
+        System.out.println("\nSecond linked list is");
+        printLinkedList(head1);
+
+        //length of linked list
+
+        System.out.println("\nLength of Linked List is(iteratively) " + linkedListLength(head));
+        System.out.println("\nLength of Linked List is(recursively) " + linkedListLengthRecursion(head));
+
+        //reverse of linked list
+
+        System.out.println("\nLinked List in reverse order is");
+        printReverseLinkedList(head);
+
+        //middle element of linked list
+
+        System.out.println("\nMiddle element of the linked list is");
+        middleLinkedList(head);
+
+        //check if linked list is a palindrome
+
+        boolean result = checkPalindrome(head);
+
+        if(result == true){
+            System.out.println("\nLinked List is palindrome");
+        }else{
+            System.out.println("\nLinked List is not palindrome");
+        }
+
+        //append to front of linked list
+
+        System.out.println("\nAppend last n elements to front of linked list");
+        printLinkedList(appendToFront(head, 4));
+
+//        //arrange linked list so that even numbers are placed after odd
 //
-//        System.out.println("Linked List in reverse order is");
-//        printReverseLinkedList(head);
-//
-//        System.out.println("Middle element of the linked list is");
-//        middleLinkedList(head);
-////
-//        head = insertIteratively(head, 10, 20);
-//
-//        printLinkedList(head);
-//
-//        head = deleteIteratively(head, 10);
-////
-//        printLinkedList(head);
-//
-////        printLinkedList(insertIteratively(head, 0, 10));
-////        printLinkedList(deleteIteratively(head, 0));
-////
-////        printLinkedList(appendToFront(head, 4));
-////
-////        printLinkedList(mergeLinkedList(head, head2));
-////
-////        printLinkedList(arrangeLinkedList(head));
-//
-//        insertRecursively(head, 10, 20);
-//
-//        printLinkedList(head);
-//
-//        head = deleteRecursively(head, 10);
-////
-//        printLinkedList(head);
-//
-//        boolean result = checkPalindrome(head);
-//
-//        if(result == true){
-//            System.out.println("\n\nLinked List is palindrome");
-//        }else{
-//            System.out.println("\n\nLinked List is not palindrome");
-//        }
+//        System.out.println("\nEven numbers after odd numbers in linked list ");
+//        printLinkedList(arrangeLinkedList(head));
+
+        //eliminated duplicates from linked list
+
+        System.out.println("\nLinked list without duplicates");
+        printLinkedList(eliminateDuplicates(head));
+
+        //insert in linked list iteratively
+
+        System.out.println("\nInserting iteratively");
+        head = insertIteratively(head, 10, 20);
+        printLinkedList(head);
+
+        //delete in linked list iteratively
+
+        System.out.println("\nDeleting iteratively");
+        head = deleteIteratively(head, 10);
+        printLinkedList(head);
+
+        //insert in linked list recursively
+
+        System.out.println("\nInserting recursively");
+        insertRecursively(head, 10, 20);
+        printLinkedList(head);
+
+        //delete in linked list recursively
+
+        System.out.println("\nDeleting recursively");
+        head = deleteRecursively(head, 10);
+        printLinkedList(head);
+
+        //merge linked list
+
+        System.out.println("\nMerged linked list is");
+        printLinkedList(mergeLinkedList(head, head1));
 
     }
 
