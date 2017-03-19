@@ -1,7 +1,5 @@
 package stack;
 
-import queue.QueueEmptyException;
-import queue.QueueUsingArray;
 import queue.QueueUsingLinkedList;
 
 public class StackUsingQueue {

@@ -1,10 +1,6 @@
 package queue;
 
-import stack.StackEmptyException;
-import stack.StackUsingArray;
 import stack.StackUsingLinkedList;
-
-import java.util.Stack;
 
 public class QueueUsingStacks {
 
@@ -41,6 +37,7 @@ public class QueueUsingStacks {
 
         if (size() == 0){
             System.out.println("Stack is empty");
+            return -1;
         }
         int toBeReturned = s1.pop();
         s1.push(toBeReturned);
@@ -52,6 +49,7 @@ public class QueueUsingStacks {
 
         if (size() == 0){
             System.out.println("Stack is empty");
+            return -1;
         }
         int toBeReturned = s1.pop();
         size--;
@@ -63,17 +61,23 @@ public class QueueUsingStacks {
 
         QueueUsingStacks q = new QueueUsingStacks();
 
+        System.out.println(q.size());
+        System.out.println(q.front());
+
         q.enqueue(10);
         q.enqueue(20);
         q.enqueue(30);
         q.enqueue(40);
         q.enqueue(50);
 
+        System.out.println(q.size());
         System.out.println(q.front());
 
         while (!q.isEmpty()){
             System.out.println(q.dequeue());
         }
+
+        System.out.println(q.size());
 
     }
 
