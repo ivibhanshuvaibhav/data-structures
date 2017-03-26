@@ -6,6 +6,8 @@ import java.util.Scanner;
 
 public class TreeOperations {
 
+    // take input of a tree level wise
+
     public static TreeNode<Integer> treeInputLevelWise(){
         Scanner s = new Scanner(System.in);
         System.out.println("Enter root");
@@ -35,6 +37,8 @@ public class TreeOperations {
         return root;
     }
 
+    // take input of a tree
+
     public static TreeNode<Integer> treeInput(){
         Scanner s = new Scanner(System.in);
         System.out.println("Enter root");
@@ -50,6 +54,8 @@ public class TreeOperations {
 
         return root;
     }
+
+    // print a tree
 
     public static void printTree(TreeNode<Integer> treeNode){
 
@@ -67,6 +73,8 @@ public class TreeOperations {
 
     }
 
+    // find maximum element of tree
+
     public static int max(TreeNode<Integer> root){
         int max = root.getData();
 
@@ -80,6 +88,8 @@ public class TreeOperations {
         return max;
     }
 
+    // pre-order traversal of tree
+
     public static void preOrder(TreeNode<Integer> root){
 
         System.out.println(root.getData());
@@ -89,6 +99,8 @@ public class TreeOperations {
         }
     }
 
+    // post-order traversal of tree
+
     public static void postOrder(TreeNode<Integer> root){
 
         for (TreeNode<Integer> child: root.children){
@@ -97,6 +109,8 @@ public class TreeOperations {
 
         System.out.println(root.getData());
     }
+
+    // find number of nodes in a tree
 
     public static int count(TreeNode<Integer> root){
         int count = 1;
