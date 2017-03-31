@@ -126,14 +126,14 @@ public class TreeOperations {
 
         // 2 2 5 6 2 78 89 2 3 56 0 0 0 0
 
-        TreeNode<Integer> root = treeInputLevelWise();
+        TreeNode<Integer> root = treeInput();
         printTree(root);
 
         System.out.println("Maximum is " + max(root));
         System.out.println("Size is " + count(root));
-        System.out.println("Preorder is ");
+        System.out.println("Pre-order is ");
         preOrder(root);
-        System.out.println("Postorder is ");
+        System.out.println("Post-order is ");
         postOrder(root);
 
     }
