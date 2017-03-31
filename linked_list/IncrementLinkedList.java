@@ -40,11 +40,7 @@ public class IncrementLinkedList {
 
         System.out.println("Number is " + number);
 
-        if (number / (int) Math.pow(10,length-1) == 10){
-            LinkedListNode<Integer> newHead = new LinkedListNode<>(1);
-            newHead.next = numberToLinkedList(number,length);
-            return newHead;
-        }
+        length = Integer.toString(number).length();
 
         return numberToLinkedList(number,length);
     }
