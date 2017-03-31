@@ -27,12 +27,11 @@ public class IncrementLinkedList {
 
         int length = linkedListLength(head);
 
-        int count = 0;
         int number = 0;
 
         while (head != null){
-            number = number + head.getData() * (int) Math.pow(10,length-count-1);
-            count++;
+            number = number + head.getData() * (int) Math.pow(10,length-1);
+            length--;
             head = head.next;
         }
 
