@@ -40,7 +40,7 @@ public class SumOfTwoArrays {
         int result = num1 + num2;
 
         for (int arr:sumOfTwoArrays(result)){
-            System.out.println(arr);
+            System.out.print(arr + " ");
         }
 
     }

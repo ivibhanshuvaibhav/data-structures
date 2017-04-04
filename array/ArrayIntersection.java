@@ -11,33 +11,31 @@ public class ArrayIntersection {
 
         int min = Math.min(length1, length2);
 
-        int[] result = new int[min];
+        int[] array = new int[min];
         int count = 0;
 
         for (int i = 0; i < length1; i++){
             for (int j = 0; j < length2; j++){
                 if (array1[i] == array2[j]){
-                    result[count] = array1[i];
+                    array[count] = array1[i];
                     count++;
                 }
             }
         }
 
-        result = Arrays.copyOfRange(result, 0, count);
-
-        return result;
+        array = Arrays.copyOfRange(array, 0, count);
+        return array;
 
     }
 
     public static void main(String[] args) {
 
-        int[] array1 = {1,2,4};
-        int[] array2 = {2,4,7};
+        int[] array1 = {1,2,4,9};
+        int[] array2 = {2,4,7,9};
 
         for (int arr: arrayIntersection(array1, array2)){
             System.out.println(arr);
         }
 
     }
-
 }
