@@ -163,7 +163,7 @@ public class Recursion {
 
     }
 
-    // count number of zero in an integer using recursion
+    // count number of zero in an integer using iteration
 
     public static int countZeroIteration(int number){
 
