@@ -23,6 +23,7 @@ public class MaximumElement {
         StackUsingLinkedList stack = new StackUsingLinkedList();
         StackUsingLinkedList max = new StackUsingLinkedList();
 
+        System.out.println(putElement(stack, max, 1));
         System.out.println(putElement(stack, max, 10));
         System.out.println(putElement(stack, max, 5));
         System.out.println(putElement(stack, max, 15));
@@ -30,6 +31,8 @@ public class MaximumElement {
         System.out.println(putElement(stack, max, 2));
         System.out.println(putElement(stack, max, 40));
         System.out.println(putElement(stack, max, 100));
+        System.out.println(stack.size());
+        System.out.println(max.size());
 
     }
 

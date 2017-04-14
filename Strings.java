@@ -26,7 +26,7 @@ public class Strings {
         int len = s.length();
 
 
-        for (int i=0; i<words.length; i++){
+        for (int i=1; i<words.length; i++){
             if(len > words[i].length()){
                 len = words[i].length();
                 s = words[i];

@@ -35,7 +35,7 @@ public class MinimumDifferenceFromLeaveNodes {
         BinaryTreeNode<Integer> root = takeInputBT();
         System.out.println("Tree is");
         printBT(root);
-        System.out.println("Minimum diiference from leave nodes is " + calculateMinimumDifferenceFromLeaveNodes(root, number));
+        System.out.println("Minimum difference from leave nodes is " + calculateMinimumDifferenceFromLeaveNodes(root, number));
 
     }
 
