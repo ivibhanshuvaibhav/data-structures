@@ -72,11 +72,14 @@ public class NumberPalindrome {
 
         int a = 323;
         int b = 123474321;
+        int g = 5435;
 
         System.out.println("Number: " + a + " Is Palindrome? " + checkPalindrome(a));
         System.out.println("Number: " + b + " Is Palindrome? " + checkPalindrome(b));
         System.out.println("Number: " + a + " Is Palindrome? " + checkPalindromeBetter(a));
         System.out.println("Number: " + b + " Is Palindrome? " + checkPalindromeBetter(b));
+        System.out.println("Number: " + g + " Is Palindrome? " + checkPalindrome(g));
+        System.out.println("Number: " + g + " Is Palindrome? " + checkPalindromeBetter(g));
 
     }
 
